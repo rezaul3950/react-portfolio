@@ -196,9 +196,97 @@
   left: 0;
   z-index: 0;
 }
+/* --- Desktop Layout (Keep your original code as it is) --- */
 
+/* --- Mobile & Tablet Optimization --- */
 @media (max-width: 1024px) {
-  .hero-container { flex-direction: column-reverse; text-align: center; padding: 80px 20px; }
-  .hero-left { margin-top: 40px; display: flex; flex-direction: column; align-items: center; }
-  .social-links, .cta-minimal { justify-content: center; }
+  .hero {
+    min-height: 100vh;
+    padding-top: 80px; /* Navbar theke halka gap */
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-container {
+    flex-direction: column; 
+    text-align: center;
+    justify-content: center;
+    gap: 0; /* Gap zero kora hoyeche jate faka na thake */
+  }
+
+  .hero-left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+  }
+
+  /* Text Content Scaling */
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    max-width: 450px;
+  }
+
+  /* --- PICTURE SECTION (Exactly like Desktop, just smaller) --- */
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px; /* Text er ektu kache niye ashar jonno */
+    margin-bottom: 40px;
+  }
+
+  .premium-wrapper {
+    /* Shudhu scale komiye design thik rakha hoyeche */
+    transform: scale(0.75); 
+    margin-bottom: -50px; /* Extra faka komanor jonno */
+  }
+
+  /* --- SOCIAL & EMAIL (Picture er niche) --- */
+  .hero-social-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .cta-minimal {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Screen (Mobile Phone) */
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 60px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .premium-wrapper {
+    /* Aro chhoto screen e aro ektu scale down */
+    transform: scale(0.65);
+    margin-top: -60px;
+    margin-bottom: -80px;
+  }
+
+  .hero-social-wrapper {
+    margin-top: 0;
+  }
 }

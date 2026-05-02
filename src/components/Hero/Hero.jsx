@@ -20,29 +20,33 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-container">
         
-        {/* LEFT SIDE */}
+        {/* LEFT SIDE: Content */}
         <motion.div
           className="hero-left"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <motion.div className="badge" variants={itemVariants}>
-            <span className="dot"></span> 
-            <span className="badge-text">Available for new opportunities</span>
-          </motion.div>
+          {/* Mobile Ordering এর জন্য উপরের টেক্সটগুলোকে আলাদা ডিভে রাখা হয়েছে */}
+          <div className="hero-text-content">
+            <motion.div className="badge" variants={itemVariants}>
+              <span className="dot"></span> 
+              <span className="badge-text">Available for new opportunities</span>
+            </motion.div>
 
-          <motion.h1 variants={itemVariants} className="hero-title">
-            Building <span className="gradient-text">Scalable</span> <br />
-            Digital Solutions 
-          </motion.h1>
+            <motion.h1 variants={itemVariants} className="hero-title">
+              Building <span className="gradient-text">Scalable</span> <br />
+              Digital Solutions 
+            </motion.h1>
 
-          <motion.p className="hero-description" variants={itemVariants}>
-            I'm <span className="highlight">Rezaul Karim</span>, a Frontend Specialist. 
-            I bridge the gap between complex backend logic and pixel-perfect 
-            user interfaces using <strong>React.js</strong> and <strong>Modern CSS</strong>.
-          </motion.p>
+            <motion.p className="hero-description" variants={itemVariants}>
+              I'm <span className="highlight">Rezaul Karim</span>, a Frontend Specialist. 
+              I bridge the gap between complex backend logic and pixel-perfect 
+              user interfaces using <strong>React.js</strong> and <strong>Modern CSS</strong>.
+            </motion.p>
+          </div>
 
+          {/* Social and Email: মোবাইলে এটি ছবির নিচে চলে যাবে */}
           <motion.div className="hero-social-wrapper" variants={itemVariants}>
             <p className="social-label">Connect with me</p>
             <div className="social-links">
@@ -68,7 +72,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT SIDE: Animated Circles */}
+        {/* RIGHT SIDE: Picture */}
         <motion.div 
           className="hero-right"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -77,35 +81,10 @@ const Hero = () => {
         >
           <div className="premium-wrapper">
             <div className="glow-blur-1"></div>
-            
-            {/* Animated Rotating Dash Ring */}
-            <motion.div 
-              className="decorative-ring"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            ></motion.div>
-            
-            {/* Animated Pulsing Neon Circle */}
-            <motion.div 
-              className="neon-circle-bg"
-              animate={{ 
-                boxShadow: [
-                  "0 0 20px rgba(59, 130, 246, 0.3)", 
-                  "0 0 40px rgba(59, 130, 246, 0.6)", 
-                  "0 0 20px rgba(59, 130, 246, 0.3)"
-                ],
-                scale: [1, 1.02, 1]
-              }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            ></motion.div>
-
+            <motion.div className="decorative-ring" animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }}></motion.div>
+            <div className="neon-circle-bg"></div>
             <div className="photo-box">
-               <motion.img 
-                src={heroImg} 
-                alt="Rezaul Karim" 
-                className="hero-photo-pro"
-                whileHover={{ scale: 1.05 }}
-              />
+               <motion.img src={heroImg} alt="Rezaul Karim" className="hero-photo-pro" whileHover={{ scale: 1.05 }} />
             </div>
           </div>
         </motion.div>
