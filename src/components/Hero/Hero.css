@@ -32,7 +32,7 @@
   padding: 8px 18px;
   border-radius: 100px;
   border: 1px solid rgba(59, 130, 246, 0.2);
-  margin-top: 50px; /* আপনার রিকোয়েস্ট অনুযায়ী নিচে নামানো হয়েছে */
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
@@ -177,7 +177,7 @@
 
 .decorative-ring {
   position: absolute;
-  width: 460px; /* একটু বড় করা হয়েছে */
+  width: 460px;
   height: 460px;
   border: 2px dashed rgba(59, 130, 246, 0.4);
   border-radius: 50%;
@@ -196,97 +196,108 @@
   left: 0;
   z-index: 0;
 }
-/* --- Desktop Layout (Keep your original code as it is) --- */
 
 /* --- Mobile & Tablet Optimization --- */
 @media (max-width: 1024px) {
   .hero {
+    padding: 100px 20px 60px 20px;
     min-height: 100vh;
-    padding-top: 80px; /* Navbar theke halka gap */
-    display: flex;
-    align-items: center;
+    height: auto;
   }
 
   .hero-container {
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
-    justify-content: center;
-    gap: 0; /* Gap zero kora hoyeche jate faka na thake */
+    gap: 0;
   }
 
+  /* এটা যোগ করা হয়েছে যাতে ভেতরের order ঠিকমতো কাজ করে */
   .hero-left {
+    display: contents; 
+  }
+
+  /* ১. টেক্সট কন্টেন্ট উপরে */
+  .hero-text-content {
+    order: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
+    margin-bottom: 20px;
   }
 
-  /* Text Content Scaling */
   .hero-title {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.2;
     margin-bottom: 15px;
-    letter-spacing: -1px;
   }
 
   .hero-description {
     font-size: 1rem;
-    margin-bottom: 20px;
-    max-width: 450px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    padding: 0 15px;
   }
 
-  /* --- PICTURE SECTION (Exactly like Desktop, just smaller) --- */
+  /* ২. পিকচার মাঝখানে */
   .hero-right {
+    order: 2;
     width: 100%;
-    display: flex;
     justify-content: center;
-    margin-top: -20px; /* Text er ektu kache niye ashar jonno */
-    margin-bottom: 40px;
+    margin: 10px 0;
   }
 
   .premium-wrapper {
-    /* Shudhu scale komiye design thik rakha hoyeche */
-    transform: scale(0.75); 
-    margin-bottom: -50px; /* Extra faka komanor jonno */
+    transform: scale(0.7);
+    height: 360px;
+    margin-bottom: -20px;
   }
 
-  /* --- SOCIAL & EMAIL (Picture er niche) --- */
+  /* ৩. সোশ্যাল এবং ইমেইল নিচে */
   .hero-social-wrapper {
+    order: 3;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .social-links {
     justify-content: center;
-    margin-bottom: 15px;
+    gap: 12px;
+  }
+
+  .social-btn {
+    width: 50px;
+    height: 50px;
   }
 
   .cta-minimal {
-    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 8px;
   }
 }
 
-/* Extra Small Screen (Mobile Phone) */
+/* Extra Small Mobile (480px) */
 @media (max-width: 480px) {
-  .hero {
-    padding-top: 60px;
+  .hero-title {
+    font-size: 1.85rem;
   }
   
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
   .premium-wrapper {
-    /* Aro chhoto screen e aro ektu scale down */
-    transform: scale(0.65);
+    transform: scale(0.58);
     margin-top: -60px;
-    margin-bottom: -80px;
+    margin-bottom: -100px;
   }
 
   .hero-social-wrapper {
     margin-top: 0;
+  }
+
+  .badge {
+    margin-top: 20px;
+    padding: 6px 14px;
   }
 }

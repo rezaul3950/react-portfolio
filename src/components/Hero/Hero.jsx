@@ -27,7 +27,7 @@ const Hero = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* Mobile Ordering এর জন্য উপরের টেক্সটগুলোকে আলাদা ডিভে রাখা হয়েছে */}
+          {/* টেক্সট অংশ */}
           <div className="hero-text-content">
             <motion.div className="badge" variants={itemVariants}>
               <span className="dot"></span> 
@@ -46,7 +46,7 @@ const Hero = () => {
             </motion.p>
           </div>
 
-          {/* Social and Email: মোবাইলে এটি ছবির নিচে চলে যাবে */}
+          {/* সোশ্যাল অংশ */}
           <motion.div className="hero-social-wrapper" variants={itemVariants}>
             <p className="social-label">Connect with me</p>
             <div className="social-links">
