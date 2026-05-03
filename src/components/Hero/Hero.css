@@ -197,107 +197,127 @@
   z-index: 0;
 }
 
-/* --- Mobile & Tablet Optimization --- */
+/* --- Mobile & Tablet Optimization (Fix for Overlapping) --- */
 @media (max-width: 1024px) {
   .hero {
-    padding: 100px 20px 60px 20px;
     min-height: 100vh;
+    padding: 100px 20px 60px 20px;
     height: auto;
+    overflow-y: auto;
   }
 
   .hero-container {
     flex-direction: column;
     text-align: center;
-    gap: 0;
+    gap: 40px; /* সেকশনগুলোর মাঝে পরিষ্কার গ্যাপ */
   }
 
-  /* এটা যোগ করা হয়েছে যাতে ভেতরের order ঠিকমতো কাজ করে */
+  /* ১. টেক্সট সেকশন */
   .hero-left {
-    display: contents; 
-  }
-
-  /* ১. টেক্সট কন্টেন্ট উপরে */
-  .hero-text-content {
-    order: 1;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    max-width: 100%;
+    order: 1;
   }
 
   .hero-title {
-    font-size: clamp(2rem, 8vw, 2.8rem);
-    line-height: 1.2;
+    font-size: clamp(2rem, 7vw, 2.8rem);
     margin-bottom: 15px;
   }
 
   .hero-description {
     font-size: 1rem;
+    margin-bottom: 20px;
     max-width: 100%;
-    margin-bottom: 10px;
-    padding: 0 15px;
   }
 
-  /* ২. পিকচার মাঝখানে */
+  /* ২. পিকচার সেকশন (মাঝখানে) */
   .hero-right {
     order: 2;
     width: 100%;
     justify-content: center;
-    margin: 10px 0;
+    margin: 0; /* কোনো নেগেটিভ মার্জিন থাকবে না */
+    display: flex;
   }
 
   .premium-wrapper {
-    transform: scale(0.7);
-    height: 360px;
-    margin-bottom: -20px;
+    /* ছবি ছোট করার সাথে সাথে কন্টেইনারের সাইজও কন্ট্রোল করা হয়েছে */
+    width: 300px; 
+    height: 300px;
+    transform: scale(1); /* স্কেল সরিয়ে উইডথ দিয়ে কন্ট্রোল করা নিরাপদ */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  /* ৩. সোশ্যাল এবং ইমেইল নিচে */
+  .neon-circle-bg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .photo-box {
+    width: 280px;
+    height: 380px;
+    border-radius: 0 0 140px 140px;
+  }
+
+  .decorative-ring {
+    width: 330px;
+    height: 330px;
+    bottom: -15px;
+  }
+
+  /* ৩. সোশ্যাল এবং ইমেইল সেকশন (সবার নিচে) */
   .hero-social-wrapper {
     order: 3;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 40px; /* ছবি থেকে কন্টাক্ট সেকশনের দূরত্ব */
   }
 
   .social-links {
     justify-content: center;
-    gap: 12px;
-  }
-
-  .social-btn {
-    width: 50px;
-    height: 50px;
   }
 
   .cta-minimal {
-    margin-top: 20px;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
   }
 }
 
 /* Extra Small Mobile (480px) */
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.85rem;
+  .hero {
+    padding-top: 80px;
   }
-  
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
   .premium-wrapper {
-    transform: scale(0.58);
-    margin-top: -60px;
-    margin-bottom: -100px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .neon-circle-bg {
+    width: 230px;
+    height: 230px;
+  }
+
+  .photo-box {
+    width: 230px;
+    height: 320px;
+    border-radius: 0 0 115px 115px;
+  }
+
+  .decorative-ring {
+    width: 280px;
+    height: 280px;
   }
 
   .hero-social-wrapper {
-    margin-top: 0;
-  }
-
-  .badge {
-    margin-top: 20px;
-    padding: 6px 14px;
+    margin-top: 50px; /* ছোট ফোনে আরও একটু গ্যাপ */
   }
 }
