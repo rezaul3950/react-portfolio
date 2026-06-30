@@ -105,7 +105,7 @@ Project Link: [https://github.com/rezaul3950/react-portfolio](https://github.com
 
 ## 👁️ Visitor Counter
 
-![Visitor Count](https://komarev.com/ghpvc/repo/rezaul3950/react-portfolio?style=flat&color=0e75b6&label=Visitors)
+![Visitors](https://komarev.com/ghpvc/?username=rezaul3950)
 
 ⭐️ **If you like this project, please give it a star!** ⭐️
 
