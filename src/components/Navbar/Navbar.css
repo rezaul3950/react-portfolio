@@ -1,0 +1,172 @@
+/* ==========================================
+   ✨ MINIMALIST PROFESSIONAL NAVBAR STYLING
+   ========================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 50px; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+
+  background: rgba(11, 17, 32, 0.75); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: #ffffff;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll Shrink */
+.navbar.scrolled {
+  padding: 10px 50px;
+  background: rgba(7, 10, 22, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 55px; 
+  width: auto;
+  object-fit: contain;
+  transform-origin: left center; 
+  margin-left: 35px; 
+  cursor: pointer;
+  /* 🌟 এখানে সিএসএস ট্রানজিশন থেকে filter ও transform বাদ দেওয়া হয়েছে যাতে Framer Motion স্মুথ চলে */
+  transition: opacity 0.3s ease; 
+}
+
+.navbar.scrolled .navbar-logo {
+  height: 44px; 
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 40px; 
+  margin-left: auto; 
+  margin-right: 50px; 
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6); 
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.5px; 
+  position: relative;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active-link {
+  color: #00ffd5; 
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffd5;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active-link::after {
+  width: 100%;
+}
+
+/* Mobile Hamburger Menu Button */
+.menu {
+  display: none;
+  font-size: 28px;
+  color: #00ffd5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu:hover {
+  transform: scale(1.1);
+}
+
+/* ==========================================
+   📱 Responsive / Mobile & Tablet View
+   ========================================== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 16px 30px; 
+  }
+
+  .navbar-logo {
+    margin-left: 15px; 
+  }
+
+  .menu {
+    display: block;
+    margin-left: auto; 
+    margin-right: 15px; 
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    flex-direction: column;
+    gap: 25px;
+    background: rgba(10, 15, 30, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 35px 40px;
+    border-radius: 16px;
+    width: 220px; 
+    
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none; 
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    margin-left: 0; 
+    margin-right: 0; 
+  }
+
+  .nav-links.active {
+    display: flex; 
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto; 
+  }
+  
+  .nav-links a {
+    align-self: flex-start; 
+    width: max-content;
+  }
+
+  .nav-links a::after {
+    display: block !important; 
+  }
+}
+
+/* Top Scroll Progress Bar */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #00ffd5, #00aaff);
+  z-index: 1001;
+}

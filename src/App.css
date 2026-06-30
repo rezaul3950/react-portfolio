@@ -1,0 +1,51 @@
+/* গ্লোবাল স্টাইলস */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #020617; /* গাঢ় নীল-কালো */
+  color: #f8fafc;
+}
+
+/* আধুনিক স্কিল সেকশন কন্টেইনার */
+.skills-wrapper {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-box {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skill-box:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.1);
+  transform: translateY(-8px);
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}

@@ -1,0 +1,440 @@
+/* গুগল ফন্ট ইমপোর্ট (Space Mono এবং Plus Jakarta Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap');
+
+.hero {
+  background-color: #020205;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: white;
+  position: relative;
+  padding: 100px 0 40px 0;
+}
+
+/* --- ১. সবার উপরে কোডিং স্ট্যাটাস টেক্সট --- */
+.hero-top-status {
+  font-family: 'Space Mono', monospace;
+  color: #3b82f6;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+  display: block;
+  z-index: 99;
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 1.1;
+  max-width: 680px;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- ২. লাইভ ডট ব্যাজ ও টেক্সট স্টাইল (ফন্ট ফিক্সড) --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  width: fit-content;
+  margin-bottom: 25px;
+}
+
+.badge-text {
+  font-family: 'Space Mono', monospace; /* টেকনিক্যাল ফন্ট সেট করা হলো */
+  font-size: 13px;
+  font-weight: 600;
+  color: #60a5fa;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 8px; height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- ৩. মেইন হেডিং ও টাইপিং এরিয়া --- */
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 3rem); 
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  color: #f8fafc;
+  text-transform: uppercase;
+} 
+
+
+
+.v12-highlight {
+  color: transparent !important;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.typing-wrapper {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;   /* 🔥 important */
+}
+
+.typing-text {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  margin-left: 5px;
+  letter-spacing: -0.5px;
+
+  background: linear-gradient(135deg, #00f0ff, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+/* R letter */
+.static-r {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* 🔥 same as typing-text */
+  font-weight: 800;
+  background: linear-gradient(90deg, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.custom-cursor {
+  margin-left: 3px;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem); /* 🔥 same */
+  color: #3b82f6;
+  animation: blink 1s infinite;
+}
+
+/* blink */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* --- ৪. ডেসক্রিপশন --- */
+.hero-description {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 580px;
+  letter-spacing: 0.3px;
+}
+
+.highlight { 
+  color: #00f0ff; 
+  font-weight: 600; 
+}
+
+/* --- সোশ্যাল ও কন্টাক্ট পার্ট --- */
+.hero-social-wrapper {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-btn {
+  width: 54px; height: 54px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-btn:hover { transform: translateY(-5px); color: white; border-color: rgba(255,255,255,0.15); }
+.github:hover { background: #24292e; }
+.linkedin:hover { background: #0077b5; }
+.twitter:hover { background: #1da1f2; }
+.facebook:hover { background: #1877f2; }
+
+.cta-minimal {
+  margin-top: 10px; 
+  font-size: 14px; 
+  color: #64748b;
+  display: flex; 
+  align-items: center; 
+  gap: 10px;
+  font-family: 'Space Mono', monospace;
+}
+
+.email-link {
+  color: #f8fafc; 
+  text-decoration: none; 
+  font-weight: 600;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  transition: color 0.3s ease;
+}
+.email-link:hover {
+  color: #3b82f6;
+}
+
+/* --- রাইট সাইড ইমেজ গ্লো ইফেক্টস --- */
+.hero-right {
+  flex: 0.9;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.premium-wrapper {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.neon-circle-bg {
+  position: absolute;
+  bottom: 0;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle at top, #111827, #030712);
+  border: 2px solid rgba(59, 130, 246, 0.8);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.photo-box {
+  position: relative;
+  width: 380px;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  z-index: 10;
+  border-radius: 0 0 190px 190px;
+}
+
+.hero-photo-pro {
+  width: 100%;
+  height: auto;
+  transform: translateY(5px) scale(1.1);
+  filter: drop-shadow(0 15px 35px rgba(0,0,0,0.5));
+}
+
+.decorative-ring {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  border: 2px dashed rgba(59, 130, 246, 0.4);
+  border-radius: 50%;
+  bottom: -40px;
+  z-index: 0;
+}
+
+.glow-blur-1 {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #3b82f6;
+  filter: blur(100px);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+ /* =======================
+   TABLET + SMALL LAPTOP
+======================= */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 20px 60px;
+    height: auto;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    gap: 40px;
+  }
+
+  .hero-left {
+    order: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-right {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .premium-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+
+  .neon-circle-bg {
+    width: 270px;
+    height: 270px;
+  }
+
+  .photo-box {
+    width: 270px;
+    height: 360px;
+    margin-top: 0;
+    border-radius: 0 0 130px 130px;
+  }
+
+  .decorative-ring {
+    width: 320px;
+    height: 320px;
+    bottom: -10px;
+  }
+
+  .hero-social-wrapper {
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+
+/* =======================
+   MOBILE (FULL FIXED)
+======================= */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 15px 40px;
+    min-height: auto;
+  }
+
+  .hero-top-status {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  /* 🔥 FIXED: stable font (no jump issue) */
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.4rem);
+    line-height: 1.2;
+    font-weight: 800;
+  }
+
+  /* 🔥 FIXED: typing font consistency */
+  .typing-text {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    display: inline-block;
+  }
+
+  .badge {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 8px;
+  }
+
+  .premium-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  .neon-circle-bg {
+    width: 220px;
+    height: 220px;
+  }
+
+  .photo-box {
+    width: 220px;
+    height: 310px;
+    margin-top: 0;
+    border-radius: 0 0 110px 110px;
+  }
+
+  .decorative-ring {
+    display: none;
+  }
+
+  .hero-social-wrapper {
+    margin-top: 20px;
+  }
+
+  .social-links {
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .social-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .cta-minimal {
+    font-size: 13px;
+    text-align: center;
+    flex-direction: column;
+  }
+}

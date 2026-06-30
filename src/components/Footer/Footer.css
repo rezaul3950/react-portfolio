@@ -1,0 +1,256 @@
+/* ===== BASE ===== */
+.footer {
+  position: relative;
+  background: #0a0a0a;
+  color: #fff;
+  padding: 80px 10% 30px;
+  overflow: hidden;
+}
+
+/* ===== BLUR BACKGROUND ===== */
+.bg-blur {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #00f0ff;
+  filter: blur(180px);
+  opacity: 0.2;
+  z-index: 0;
+
+  pointer-events: none; /* 🔥 FIX */
+}
+
+.bg-blur.one {
+  top: -50px;
+  left: -50px;
+}
+
+.bg-blur.two {
+  bottom: -50px;
+  right: -50px;
+}
+
+/* ===== GRID ===== */
+.footer-box {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* ===== TEXT ===== */
+.footer-col h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+
+  background: linear-gradient(270deg, #00f0ff, #00ffa6, #00f0ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #00f0ff;
+}
+
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* ===== LINKS ===== */
+.footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #00f0ff;
+  transform: translateX(5px);
+}
+
+/* ===== SOCIAL ICONS ===== */
+.socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.socials a {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #00f0ff;
+  color: #000;
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 0 15px #00f0ff;
+}
+
+.socials svg {
+  display: block;
+}
+
+/* ===== INPUT ===== */
+.input-wrap {
+  display: flex;
+  margin-top: 15px;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.input-wrap input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+}
+
+.input-wrap button {
+  padding: 12px 20px;
+  background: #00f0ff;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.input-wrap button:hover {
+  background: #00c2d1;
+}
+
+/* ===== BOTTOM ===== */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* ===== TOP BUTTON ===== */
+.top-btn {
+  width: 40px;
+  height: 40px;
+  background: #00f0ff;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 5; /* 🔥 FIX */
+  transition: 0.3s;
+}
+
+.top-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .footer-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 60px 15px 30px;
+  }
+
+  .footer-box {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .socials a {
+    width: 45px;
+    height: 45px;
+  }
+
+  /* INPUT FIX */
+  .input-wrap {
+    flex-direction: column;
+    gap: 12px;
+    background: transparent;
+    border: none;
+  }
+
+  .input-wrap input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  .input-wrap button {
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #00f0ff, #00ffa6);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .top-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
