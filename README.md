@@ -103,13 +103,9 @@ This project is licensed under the MIT License - feel free to use it for your ow
 
 Project Link: [https://github.com/rezaul3950/react-portfolio](https://github.com/rezaul3950/react-portfolio)
 
----
-
 ## 👁️ Visitor Counter
 
 ![Visitor Count](https://komarev.com/ghpvc/repo/rezaul3950/react-portfolio?style=flat&color=0e75b6&label=Visitors)
-
----
 
 ⭐️ **If you like this project, please give it a star!** ⭐️
 
