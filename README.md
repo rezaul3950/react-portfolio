@@ -1,16 +1,116 @@
-# React + Vite
+# 👋 Hi, I'm Rezaul
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS](https://img.shields.io/badge/CSS-239120?style=for-the-badge&logo=css3&logoColor=white)
 
-Currently, two official plugins are available:
+## 🚀 About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I'm a passionate **React Developer** from Bangladesh, focused on building modern, responsive, and user-friendly web applications. I love turning complex problems into simple, beautiful, and intuitive solutions.
 
-## React Compiler
+- 🔭 Currently working on **React Portfolio Projects**
+- 🌱 Learning **Advanced React Patterns & Modern Web Technologies**
+- 💬 Ask me about **React, JavaScript, CSS, and Web Development**
+- ⚡ Fun fact: I enjoy creating clean and maintainable code
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies & Tools
 
-## Expanding the ESLint configuration
+### Frontend
+- **React.js** - Building interactive user interfaces
+- **Vite** - Next generation frontend tooling
+- **JavaScript (ES6+)** - Modern JavaScript features
+- **CSS3** - Styling and animations
+- **HTML5** - Semantic markup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Tools & Platforms
+- **Git & GitHub** - Version control
+- **VS Code** - Code editor
+- **npm** - Package management
+
+## 📂 Projects
+
+### 🎨 React Portfolio
+A modern, responsive portfolio website built with React and Vite.
+
+**Features:**
+- ✨ Clean and modern UI design
+- 📱 Fully responsive layout
+- ⚡ Fast performance with Vite
+- 🎯 Smooth animations and transitions
+- 📄 Multiple sections (Home, About, Projects, Skills, Contact)
+
+**Tech Stack:**
+- React.js
+- Vite
+- CSS3
+- JavaScript ES6+
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/rezaul3950/react-portfolio.git
+```
+
+2. Navigate to the project directory
+```bash
+cd react-portfolio
+```
+
+3. Install dependencies
+```bash
+npm install
+```
+
+4. Start the development server
+```bash
+npm run dev
+```
+
+5. Open your browser and visit
+```
+http://localhost:5173
+```
+
+## 📸 Preview
+
+![Portfolio Preview](https://via.placeholder.com/800x400/667eea/ffffff?text=React+Portfolio+Preview)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - feel free to use it for your own portfolio!
+
+## 📬 Contact
+
+**Rezaul** - [@rezaul3950](https://github.com/rezaul3950)
+
+Project Link: [https://github.com/rezaul3950/react-portfolio](https://github.com/rezaul3950/react-portfolio)
+
+---
+
+## 👁️ Visitor Counter
+
+![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/rezaul3950/react-portfolio&count_bg=%2367AC55&title_bg=%23555555&title=Visitors&edge_flat=false)
+
+---
+
+⭐️ **If you like this project, please give it a star!** ⭐️
+
+Made with ❤️ and React
