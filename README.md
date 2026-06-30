@@ -107,7 +107,7 @@ Project Link: [https://github.com/rezaul3950/react-portfolio](https://github.com
 
 ## 👁️ Visitor Counter
 
-![Visitor Count](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/rezaul3950/react-portfolio&count_bg=%2367AC55&title_bg=%23555555&title=Visitors&edge_flat=false)
+![Visitor Count](https://komarev.com/ghpvc/repo/rezaul3950/react-portfolio?style=flat&color=0e75b6&label=Visitors)
 
 ---
 
