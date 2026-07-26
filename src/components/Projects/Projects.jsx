@@ -8,9 +8,9 @@ const Projects = () => {
       title: "E-Commerce App",
       description: "A high-performance online store built with React and Redux, featuring a seamless checkout experience.",
       tech: ["React", "Node.js", "MongoDB"],
-      image: "/project-1.png", // Public folder path
-      live: "#",
-      github: "#"
+      image: "/Project-1.jpg", // Public folder path
+      live: "https://mobile-shop-woad.vercel.app",
+      github: "https://github.com/rezaul3950/mobile-shop.git"
     },
     {
       id: 2,
@@ -25,10 +25,10 @@ const Projects = () => {
       id: 3,
       title: "Portfolio Website",
       description: "A creative portfolio with smooth animations and a focus on clean typography and UI.",
-      tech: ["React", "Framer Motion", "CSS3"],
-      image: "/project-3.png",
-      live: "#",
-      github: "#"
+      tech: ["HTML", "CSS3"],
+      image: "/Project-3.jpg",
+      live: " https://rezaul3950.github.io/My-Portfolio",
+      github: " https://github.com/rezaul3950/My-Portfolio"
     }
   ];
 
